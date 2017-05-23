@@ -10,7 +10,7 @@ describe('Searching by input keys',  ()=>  {
 
         let searchRequest = 'Love'
 
-       // searchField.sendKeys(searchRequest)
+       searchField.sendKeys(searchRequest)
         browser.sleep(5000)
         element(By.css('span.input-group-btn button.btn.btn-primary')).click()
         browser.sleep(5000)
@@ -18,12 +18,13 @@ describe('Searching by input keys',  ()=>  {
 
        
           movieCards.each(function (elem, indx) {
-           expect(elem.getText()).toContain(searchRequest)}
+           expect(elem.getText()).toContain(searchRequest)
+          })
 
        // let movieCard =By.css('movie-card')
      // let title = By.css('movieCard.h4 a').getText()
           //expect(title).toContain(searchRequest)
-    
+ 
         })
   
         it('Search2', ()=> {
